@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <canvas></canvas>
-    <input id="line-width" type="range" min="1" max="10" value="5" step="0.5" />
-    <div>
+    <div class="color-options">
       <input type="color" id="color" />
       <div
         class="color-option"
@@ -58,8 +56,8 @@
       ></div>
       <div
         class="color-option"
-        style="background-color: #bdc3c7"
-        data-color="#bdc3c7"
+        style="background-color: #2ecc74"
+        data-color="#2ecc74"
       ></div>
       <div
         class="color-option"
@@ -67,12 +65,29 @@
         data-color="#e67e22"
       ></div>
     </div>
-    <button id="mode-btn">Fill</button>
-    <button id="destroy-btn">Destroy</button>
-    <button id="eraser-btn">Erase</button>
-    <input type="file" accept="image/*" id="file" />
-    <input type="text" placeholder="Write and then double click" id="text" />
-    <button id="save">Save image</button>
-    <script src="app.js"></script>
+    <canvas></canvas>
+    <div class="btns">
+      <input
+        id="line-width"
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+        step="0.5"
+      />
+
+      <button id="mode-btn">🩸 Fill</button>
+      <button id="destroy-btn">💣 Destroy</button>
+      <button id="eraser-btn">❌ Erase</button>
+
+      <!--for의 값이 input의 id의 값과 같으면 input이 label 밖에 위치해도 됨-->
+      <label for="file"
+        >💅🏻 Add Photo<input type="file" accept="image/*" id="file"
+      /></label>
+
+      <input type="text" id="text" placeholder="Add text here... :)" />
+      <button id="save">🖼️ Save image</button>
+      <script src="app.js"></script>
+    </div>
   </body>
 </html>
